@@ -1,6 +1,6 @@
 /// <reference path="./p5.global-mode.d.ts" />
 
-penisMode = false
+pMode = false
 heartTimerIsOn = false;
 heartTimer = 0.0;
 heartScale = 1;
@@ -50,7 +50,7 @@ function cursorHeartDraw(x,y,scale) {
   translate(x, y)
   rotate(radians(-heartRotation))
 
-  if(penisMode == false) {
+  if(pMode == false) {
     beginShape()
     for (a = 0; a < TWO_PI; a+=0.01) {
       r = scale
@@ -61,7 +61,7 @@ function cursorHeartDraw(x,y,scale) {
     endShape()
   }
 
-  if (penisMode == true) {
+  if (pMode == true) {
     translate(0, -15 * scale)
     arc(0, 0, 10*scale, 10*scale, PI, 2 * PI);
     translate(0, +15 * scale)
@@ -98,7 +98,7 @@ function HeartDraw(x,y,scale) {
     multipleHearts.endShape()
   }
 
-  if (penisMode == true) {
+  if (pMode == true) {
     multipleHearts.translate(0, -15 * scale)
     multipleHearts.arc(0, 0, 10*scale, 10*scale, PI, 2 * PI);
     multipleHearts.translate(0, +15 * scale)
@@ -128,13 +128,13 @@ function mouseWheel(event) {
   }
 }
 
-function keyPressed() {
-  if (key === 'p') {
-    if (penisMode == false) {
-      penisMode = true
-    }
-    else if (penisMode == true) {
-      penisMode = false
-    }
-  }
-}
+// function keyPressed() {
+//   if (key === 'p') {
+//     if (pMode == false) {
+//       pMode = true
+//     }
+//     else if (pMode == true) {
+//       pMode = false
+//     }
+//   }
+// }
