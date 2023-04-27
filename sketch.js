@@ -87,7 +87,7 @@ function HeartDraw(x,y,scale) {
   multipleHearts.translate(x,y)
   multipleHearts.rotate(radians(-heartRotation))
 
-  if (penisMode == false) {
+  if (pMode == false) {
     multipleHearts.beginShape()
     for (a = 0; a < TWO_PI; a+=0.01) {
       r = scale
@@ -128,13 +128,13 @@ function mouseWheel(event) {
   }
 }
 
-// function keyPressed() {
-//   if (key === 'p') {
-//     if (pMode == false) {
-//       pMode = true
-//     }
-//     else if (pMode == true) {
-//       pMode = false
-//     }
-//   }
-// }
+ function keyPressed() {
+   if (key === 'p') {
+     if (pMode == false) {
+       pMode = true
+     }
+     else if (pMode == true) {
+       pMode = false
+     }
+   }
+ }
