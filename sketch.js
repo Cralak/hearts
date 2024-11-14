@@ -127,12 +127,3 @@ function mouseWheel(event) {
     heartRotation -= 10
   }
 }
-
-function pMode() {
-  if (pMode == false) {
-    pMode = true
-  }
-  else if (pMode == true) {
-    pMode = false
-  }
-}
