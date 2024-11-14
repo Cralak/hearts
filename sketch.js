@@ -128,13 +128,11 @@ function mouseWheel(event) {
   }
 }
 
-// function keyPressed() {
-//   if (key === 'p') {
-//     if (pMode == false) {
-//       pMode = true
-//     }
-//     else if (pMode == true) {
-//       pMode = false
-//     }
-//   }
-// }
+function pMode() {
+  if (pMode == false) {
+    pMode = true
+  }
+  else if (pMode == true) {
+    pMode = false
+  }
+}
